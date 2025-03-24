@@ -1,0 +1,34 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    border: 1px solid grey;
+  }
+  
+  .spinner-image {
+    width: 300px;
+    height: 300px;
+    transform-origin: center center;
+  }
+  
+  /* Animazione che parte veloce e rallenta gradualmente */
+  @keyframes spin-and-slow {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+    15% {
+      transform: rotate(540deg);
+      animation-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+    }
+    100% {
+      transform: rotate(1080deg);
+      animation-timing-function: cubic-bezier(0.7, 0.1, 1, 0.5);
+    }
+  }
+  
+  .spinning {
+    animation: spin-and-slow 3.5s forwards;
+  }

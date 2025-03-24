@@ -7,13 +7,26 @@
     </button>
   </header>
 
-  <main class="main">
-    <!-- Contenuto del CV -->
-    <section class="content-section">
-      <h1>Il mio Curriculum</h1>
-      <p>Benvenuto nel mio curriculum interattivo!</p>
-    </section>
+  <main class="w-100">
+    <!-- <div *ngIf="!isSecondScreen" class="main-container">
+      <app-spinner></app-spinner>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div class="hero-container">
+        <app-typing-text
+          [text]="'I, im Raimon a dev from Italy and this is my resume, enjoy!'"
+          [typingSpeed]="100"
+          [startDelay]="1000"
+          [showCursor]="true"
+        >
+        </app-typing-text>
+        <button (click)="toggleSecondScreen()">GO to...</button>
+      </div>
+    </div> -->
+
+    <!-- <div *ngIf="isSecondScreen" class="main-container-page-2"> -->
+      <app-cv-page></app-cv-page>
+    <!-- </div> -->
   </main>
 
-  <router-outlet />
+ 
 </div>
